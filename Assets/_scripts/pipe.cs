@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
-    public string ID; // Mã định danh cho ống dẫn
-    public FunctionNode node; // Node bắt đầu của ống dẫn
-    // Hàm khởi tạo ống dẫn với ID và node bắt đầu/kết thúc tương ứng
+    public string ID; // Mã định danh cho pipe
+    public FunctionNode node; // Node bắt đầu của pipe
+    // Hàm khởi tạo pipe với ID và node bắt đầu/kết thúc tương ứng
     public Pipe(string id, FunctionNode start) {
         ID = id;
         node = start;
@@ -19,11 +19,11 @@ public class Pipe : MonoBehaviour
         Console.WriteLine("ID: " + myPipe.GetPipeID());
         Console.WriteLine("Start: " + myPipe.GetNode().name);
     }
-    // Hàm lấy ID của ống dẫn
+    // Hàm lấy ID của pipe
     public string GetPipeID() {
         return ID;
     }
-    // Hàm lấy node bắt đầu của ống dẫn
+    // Hàm lấy node bắt đầu của pipe
     public FunctionNode GetNode() {
         return node;
     }
