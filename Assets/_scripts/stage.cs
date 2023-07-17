@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stage : MonoBehaviour
+public class Stage : MonoBehaviour // Change 'stage' to 'Stage' here
 {
     private string id;
     private string name;
@@ -10,50 +10,44 @@ public class stage : MonoBehaviour
     private string[] fNid;
     private string[] rNid;
 
-
     // Create a class constructor for the stage class (this is just a test case)
-    public stage()
+    public Stage() // Change 'stage' to 'Stage' here
     {
-        id = "lvl_01"; // Set the initial value for model
+        id = "lvl_01";
         name = "Level 1";
-        challenges = [true, true, true];
-        fNid = ["f1","f2","f3"];
-        rNid = ["r1","r2","r3"];
+        challenges = new bool[] { true, true, true };
+        fNid = new string[] { "f1", "f2", "f3" };
+        rNid = new string[] { "r1", "r2", "r3" };
     }
-
-    static void Main(string[] args)
+    
+    // Start is called before the first frame update
+    void Start()
     {
         Stage LVL02 = new Stage();
         LVL02.id = "lvl_02";
         LVL02.name = "Level 2";
-        LVL02.challenges = new bool[] { true, true, true }; // Create a new array object
-        LVL02.fNid = new string[] { "f1", "f2", "f3" }; // Create a new array object
-        LVL02.rNid = new string[] { "r1", "r2", "r3" }; // Create a new array object
-        Console.WriteLine(LVL02.id);
-        Console.WriteLine(LVL02.name);
+        LVL02.challenges = new bool[] { true, true, true };
+        LVL02.fNid = new string[] { "f1", "f2", "f3" };
+        LVL02.rNid = new string[] { "r1", "r2", "r3" };
+        Debug.Log(LVL02.id);
+        Debug.Log(LVL02.name);
         foreach (bool i in LVL02.challenges)
         {
-            Console.Write(i);
+            Debug.Log(i);
         }
         foreach (string i in LVL02.fNid)
         {
-            Console.Write(i);
+            Debug.Log(i);
         }
         foreach (string i in LVL02.rNid)
         {
-            Console.Write(i);
+            Debug.Log(i);
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -14,21 +14,14 @@ public class player : MonoBehaviour
         score = 200;
     }
 
-    static void Main(string[] args)
+    // Start is called before the first frame update
+    void Start()
     {
         player user1 = new player();
         user1.name = "Thien";
         user1.score = 500;
-        Console.WriteLine(user1.name);
-        Console.WriteLine(user1.score);
-    }
-
-
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        Debug.Log(user1.name);
+        Debug.Log(user1.score);
     }
 
     // Update is called once per frame

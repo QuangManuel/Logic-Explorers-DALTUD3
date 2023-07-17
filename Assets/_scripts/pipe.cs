@@ -11,13 +11,25 @@ public class Pipe : MonoBehaviour
         ID = id;
         node = start;
     }
-    public static void Main(string[] args) {
-        // Tạo một đối tượng FunctionNode mới
-        Pipe myPipe = new Pipe("001", node);
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        // Tạo một đối tượng Node mới với các đối số cần thiết
+        Node start = new Node("001", "Start Node", 0, "Start Address");
+
+        // Tạo một đối tượng Pipe mới với ID và node bắt đầu đã khởi tạo
+        Pipe myPipe = new Pipe("001", start);
 
         // Lấy thông tin thuộc tính và in ra màn hình
-        Console.WriteLine("ID: " + myPipe.GetPipeID());
-        Console.WriteLine("Start: " + myPipe.GetNode().name);
+        Debug.Log("ID: " + myPipe.GetPipeID());
+        Debug.Log("Start: " + myPipe.GetNode().name);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
     // Hàm lấy ID của pipe
     public string GetPipeID() {
@@ -26,16 +38,5 @@ public class Pipe : MonoBehaviour
     // Hàm lấy node bắt đầu của pipe
     public Node GetNode() {
         return node;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
